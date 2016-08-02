@@ -59,10 +59,11 @@ def index_images(page,per_page):
                              'content':comment.content})
         imgvo = {'id':image.id,
                  'url':image.url,
+                 'image_user_username':image.user.username,
                  'comment_count':len(image.comments),
                  'user_id':image.user_id,
                  'head_url':image.user.head_url,
-                 'created_date':str(image.created_date),
+                 'created_date':str(image.created_date), #str(image.created_date),
                  'comments':comments}
         images.append(imgvo)
 
